@@ -39,4 +39,16 @@ npm i --save chai chai-bn chai-as-promised
     const Token = artifacts.require("MyToken") .. no need of .sol , it will be taken care of
 
 
+us can use truffle blockchaim
+or ganache configuration
+
+
+under network (truffle config file)
+
+development :{
+    port:7885 (check with ganacehe),
+    network_id:5777,
+    host:"127.0.0.1"
+
+}
 
