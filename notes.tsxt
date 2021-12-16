@@ -1,0 +1,18 @@
+Tokenize Real -wold Assets
+
+fungible vrs non -fungible
+
+non-fungible
+    Non-interchangeable
+    unique
+    Non-Divisible (to some degree) //you cant tear up my house and take a part
+    serial number attached to a token
+    ERC-721 Standard
+
+fungible tokens
+    interchangeable
+    Uniform
+    Divisible
+    ERC-20 or ERC-777(new but backward compatible)
+    eg money
+
