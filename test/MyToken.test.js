@@ -12,6 +12,14 @@ chai.use(chaiAsPromised);
 
 const expect = chai.expect
 
-contract("Token Test",async (accounts)=>{
-    
+contract("Token Test",async (accounts) =>{
+    it("All Tokens should be in my account",async () =>{
+        /// get the instance 
+        let instance = await Token.deployed();
+        let totalSupply = await  instance.totalSupply();
+
+        expect(instance.balanceOf(accounts[0])).to.eventually.be.a.bignumber.equal(totalSupply)
+
+    })
+
 })
