@@ -32,3 +32,11 @@ deploying steps
     go to documentationon the soc section just search
 4.passing arguments to the constructor
 
+
+testing --- using  chain
+npm i --save chai chai-bn chai-as-promised
+1.import artifacts , just like deployement script
+    const Token = artifacts.require("MyToken") .. no need of .sol , it will be taken care of
+
+
+
