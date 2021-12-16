@@ -16,3 +16,19 @@ fungible tokens
     ERC-20 or ERC-777(new but backward compatible)
     eg money
 
+
+deploying steps
+1.import artifacts
+    an artfact is a deployed smart contract
+    var === artfact.require("myToke")
+2. a fucntion which deploys
+    deployer a  handle that connnects us to the blockchain
+    specify what you want to deploy
+
+3.deploy what you want to deploy
+    truffle developer
+    truffle migrate
+    N.B truffle thing of different compilers
+    go to documentationon the soc section just search
+4.passing arguments to the constructor
+
