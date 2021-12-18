@@ -17,6 +17,21 @@ contract("TokenSale Test",async (accounts) =>{
         let instance = await Token.deployed()
         return expect(instance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(new BN(0))
     })
+    it("all tokens ahold be in a Token Sale smart contract by default",async () =>{
+        let instance = await Token.deployed();
+        let balanceOfTokenSaleSmartcontract = await instance.balanceOf(TokenSale.address);
+        let totalSupply = await instance.totalSupply();
+       return expect(balanceOfTokenSaleSmartcontract).to.be.a.bignumber.equal(totalSupply)
+
+    })
+    it("should be possible to buy tokens", async () =>{
+        let tokenInstance = await  Token.deployed()
+        let tokenSaleInstance = await TokenSale.deployed();
+        let balanceBefore = await tokenInstance.balanceOf(deployerAccount);
+        expect(tokenSaleInstance.sendTransaction({from:deployerAccount, value:web3.utils.toWei("1","wei")})).to.be.fulfilled;
+    
+        return expect(tokenInstance.balanceOf(deployerAccount)).to.be.eventually.be.a.bignumber.equal(balanceBefore.add(new BN(0)))
+    })
 
 
 })
