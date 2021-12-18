@@ -68,3 +68,21 @@ so we need to send all the token to myToken Sale Contract
 
     delpoying using a specific network
         truffle migrate --network ganache_local
+
+
+
+deploying to the testnet
+
+    infura service it host blockchain nodes
+    allows u to connect to the network unlike you hosting the node and syc with the rest of the node
+    so it connects on your behalf to the blockchain network
+    all you have to do is send signed transaction
+
+    change your networks in config
+    ropsten is network:3
+    goelie :5
+
+    truffle migrate --network ropsten_infura
+
+
+
